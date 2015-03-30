@@ -1,6 +1,6 @@
 === Simple Alert Boxes ===
 Contributors: mardojai
-Tags: shortcodes, alert, boxes
+Tags: shortcodes, alert, boxes, mensajes, alertas, mensagges
 Requires at least: 3.0.1
 Tested up to: 4.1.1
 Stable tag: 4.1.1
@@ -15,7 +15,12 @@ Use responsives alert boxes with shortcodes.
 
 Is easy, only use the shortcodes.
 
-Example: Use [alert type="success" text="Your text heer"] for a success mensagge. Use [alert type="info" text="Your text heer"] for a info mensagge. Use [alert type="warning" text="Your text heer"] for a warning mensagge. Use [alert type="danger" text="Your text heer"] for a danger mensagge.
+Example: For a success mensagge use: [alert type="success"]Your text here[/alert], for a info mensagge: [alert type="info"]Your text here[/alert], for a warning mensagge: [alert type="warning"]Your text here[/alert] and for a danger mensagge: [alert type="danger"]Your text here[/alert].
+
+(For version 1.0 you must use: [alert type="success" text="Your text heer"]).
+
+DEMO HERE: http://www.rafael.mardojai.com/simple-alert-boxes-plugin/
+GITHUB REPOSITORY: https://github.com/mardojai/Simple-Alert-Boxes-Wordpress-Plugin
 
 
 == Installation ==
@@ -26,25 +31,14 @@ Example: Use [alert type="success" text="Your text heer"] for a success mensagge
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets 
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png` 
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. screenshot-1.png
 
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
+* Responsive Design
+* Shortcodes
 
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
-
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
+= 1.1 =
+* Optimized Shortcodes
+* Support bold, italic, links and more
