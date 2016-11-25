@@ -43,10 +43,6 @@ function alert_output( $atts, $content ) {
 
 /** TinyMCE Plugin **/
 function alert_boxes_tinymce() {
-    global $typenow;
-
-    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
-        return ;
 
     add_filter( 'mce_external_plugins', 'fb_add_tinymce_plugin' );    
     add_filter( 'mce_buttons', 'fb_add_tinymce_button' );
