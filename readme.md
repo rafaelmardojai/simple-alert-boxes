@@ -1,12 +1,32 @@
 # Simple Alert Boxes
 Use responsives alert boxes with shortcodes.
+Is easy, only use the shortcode.
 
-Is easy, only use the shortcodes.
+Example: For a info message use:
+`[alert type="success"]Your text here[/alert]`
+Also you can change the icon size:
+`[alert type="success" icon-size="big"]Your text here[/alert]`
 
-Example: For a success mensagge use: [alert type="success"]Your text here[/alert], for a info mensagge: [alert type="info"]Your text here[/alert], for a warning mensagge: [alert type="warning"]Your text here[/alert] and for a danger mensagge: [alert type="danger"]Your text here[/alert].
+**Shortcode attributes:**
 
-* DEMO HERE: http://www.rafael.mardojai.com/simple-alert-boxes-plugin/
-* GITHUB REPOSITORY: https://github.com/mardojai/Simple-Alert-Boxes-Wordpress-Plugin
+* type (defines the style of the alert box):
+  * info (display a info style box)
+  * success (display a success style box)
+  * warning (display a warning style box)
+  * danger (display a danger style box)
+
+* icon_size (defines the icon size):
+  * normal (icon normal size)
+  * small (icon small size)
+  * big (icon big size)
+  * hide-icon (no display the icon)
+
+`[alert type="type" icon-size="icon-size"]Your text here[/alert]`
+
+----
+
+* Demo & Examples: http://www.rafael.mardojai.com/simple-alert-boxes-plugin/
+* Github repository: https://github.com/mardojai/Simple-Alert-Boxes-Wordpress-Plugin
 
 ## Installation
 
@@ -21,6 +41,20 @@ Example: For a success mensagge use: [alert type="success"]Your text here[/alert
 
 
 ## Changelog
+
+#### 1.4.0 (current dev)
+* Settings page
+* CSS improvements
+* Render others shortcodes inside the shortcode
+
+#### 1.3.1
+* CSS improvements
+
+#### 1.3.0
+* Plugin now uses Dashicons
+* New icon size attribute
+* CSS improvements
+* TinyMCE plugin improvements
 
 #### 1.2
 * TinyMCE Plugin
