@@ -126,11 +126,6 @@ add_filter( 'the_content', 'sab_empty_paragraph_fix' );
  * @since 1.2.0
  */
 function simple_alert_boxes_tinymce() {
-    global $typenow;
-
-    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
-        return ;
-
     add_filter( 'mce_external_plugins', 'sab_add_tinymce_plugin' );
     add_filter( 'mce_buttons', 'sab_add_tinymce_button' );
 }
