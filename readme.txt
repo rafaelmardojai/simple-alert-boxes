@@ -3,7 +3,7 @@ Contributors: mardojai
 Tags: shortcode, shortcodes, alert, boxes, mensajes, alertas, mensagges
 Requires at least: 3.8
 Tested up to: 4.5
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,19 +53,27 @@ Also you can change the icon size:
 
 == Changelog ==
 
-= 1.3 =
+= 1.4.0 =
+* Settings page
+* CSS improvements
+* Render others shortcodes inside the shortcode
+
+= 1.3.1 =
+* CSS improvements
+
+= 1.3.0 =
 * Plugin now uses Dashicons
 * New icon size attribute
 * CSS improvements
 * TinyMCE plugin improvements
 
-= 1.2 =
+= 1.2.0 =
 * TinyMCE Plugin
 
-= 1.1 =
+= 1.1.0 =
 * Optimized Shortcodes
 * Support bold, italic, links and more
 
-= 1.0 =
+= 1.0.0 =
 * Responsive Design
 * Shortcodes

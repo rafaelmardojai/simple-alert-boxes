@@ -12,34 +12,41 @@
                     title: 'Insert Alert Box',
                     body: [
                         {
-                        type: 'textbox',
-                        name: 'text',
-                        label: 'Text',
-                        value: selection,
-                        multiline: true,
-                        minWidth: 300,
-                        minHeight: 100
+                            type: 'textbox',
+                            name: 'text',
+                            label: 'Text',
+                            value: selection,
+                            multiline: true,
+                            minWidth: 300,
+                            minHeight: 100
                         },
                         {
-                        type: 'listbox',
-                        name: 'box_type',
-                        label: 'Box Type',
-                        'values': [
-                            {text: 'Info Box', value: 'info'},
-                            {text: 'Success Box', value: 'success'},
-                            {text: 'Warning Box', value: 'warning'},
-                            {text: 'Danger Box', value: 'danger'}
-                        ]},
+                            type: 'listbox',
+                            name: 'box_type',
+                            label: 'Box Type',
+                            'values': [
+                                {text: 'Info Box', value: 'info'},
+                                {text: 'Success Box', value: 'success'},
+                                {text: 'Warning Box', value: 'warning'},
+                                {text: 'Danger Box', value: 'danger'}
+                            ]
+                        },
                         {
-                        type: 'listbox',
-                        name: 'icon_size',
-                        label: 'Icon Size',
-                        'values': [
-                            {text: 'Normal', value: 'normal'},
-                            {text: 'Small', value: 'small'},
-                            {text: 'Big', value: 'big'},
-                            {text: 'Hide Icon', value: 'hide-icon'}
-                        ]}
+                            type: 'listbox',
+                            name: 'icon_size',
+                            label: 'Icon Size',
+                            'values': [
+                                {text: 'Normal', value: 'normal'},
+                                {text: 'Small', value: 'small'},
+                                {text: 'Big', value: 'big'},
+                                {text: 'Hide Icon', value: 'hide-icon'}
+                            ]
+                        },
+                        {
+                            type: 'checkbox',
+                            name: 'closable',
+                            label: 'Closable'
+                        }
                     ],
                     onsubmit: function(e){
                         // Insert content when the window form is submitted
