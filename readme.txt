@@ -1,9 +1,9 @@
 === Simple Alert Boxes ===
 Contributors: mardojai
-Tags: shortcodes, alert, boxes, mensajes, alertas, mensagges
-Requires at least: 3.0.1
-Tested up to: 4.3.0
-Stable tag: 4.3.0
+Tags: shortcode, shortcodes, alert, boxes, mensajes, alertas, mensagges
+Requires at least: 3.8
+Tested up to: 4.5
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,14 +12,33 @@ Use responsives alert boxes with shortcodes.
 == Description ==
 
 Use responsives alert boxes with shortcodes.
+Is easy, only use the shortcode.
 
-Is easy, only use the shortcodes.
+Example: For a info message use:
+`[alert type="success"]Your text here[/alert]`
+Also you can change the icon size:
+`[alert type="success" icon-size="big"]Your text here[/alert]`
 
-Example: For a success mensagge use: [alert type="success"]Your text here[/alert], for a info mensagge: [alert type="info"]Your text here[/alert], for a warning mensagge: [alert type="warning"]Your text here[/alert] and for a danger mensagge: [alert type="danger"]Your text here[/alert].
+**Shortcode attributes:**
 
-* DEMO HERE: http://www.rafael.mardojai.com/simple-alert-boxes-plugin/
-* GITHUB REPOSITORY: https://github.com/mardojai/Simple-Alert-Boxes-Wordpress-Plugin
+* type (defines the style of the alert box):
+  * info (display a info style box)
+  * success (display a success style box)
+  * warning (display a warning style box)
+  * danger (display a danger style box)
 
+* icon_size (defines the icon size):
+  * normal (icon normal size)
+  * small (icon small size)
+  * big (icon big size)
+  * hide-icon (no display the icon)
+
+`[alert type="type" icon-size="icon-size"]Your text here[/alert]`
+
+----
+
+* Demo & Examples: http://www.rafael.mardojai.com/simple-alert-boxes-plugin/
+* Github repository: https://github.com/mardojai/Simple-Alert-Boxes-Wordpress-Plugin
 
 == Installation ==
 
@@ -33,6 +52,12 @@ Example: For a success mensagge use: [alert type="success"]Your text here[/alert
 1. screenshot-2.png
 
 == Changelog ==
+
+= 1.3 =
+* Plugin now uses Dashicons
+* New icon size attribute
+* CSS improvements
+* TinyMCE plugin improvements
 
 = 1.2 =
 * TinyMCE Plugin

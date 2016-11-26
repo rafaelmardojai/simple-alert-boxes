@@ -1,40 +1,151 @@
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.4.0');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/*--------------------------------------------------
+/* Alert Boxes Style
+--------------------------------------------------*/
 .alert {
-    box-sizing: border-box;
-    margin: 20px 0px;
-    padding: 20px !important;
-    width: 100%;
+  box-sizing: border-box;
+  border: 1px solid;
+  font-size: 100%;
+  margin: 1em 0;
+  padding: 1em !important;
+  position: relative;
+  width: 100%;
 }
-
-.alert p {
-    padding: 0px !important;
-    margin: 0px !important;
+.alert *:last-child {
+  margin-bottom: 0;
 }
-
-.alert a {
-    text-decoration: underline !important;
+.alert.normal {
+  padding-left: 2.884em !important;
 }
-
-.alert p:before {
-    font-family: FontAwesome;
-    padding-right: 20px;
+.alert.small {
+  padding-left: 2.667em !important;
 }
-
-.success, .success a {background: #DFF0D8 !important;color: #468847 !important;}
-.success p:before {content: "\f00c";}
-
-.info, .info a {background:#D9EDF7 !important;color:#3A87AD !important;}
-.info p:before {content: "\f12a";}
-
-.warning, .warning a {background: #FCF8E3 !important;color: #C09853 !important;}
-.warning p:before {content: "\f12a";}
-
-.danger, .danger a {background: #F2DEDE !important;color: #B94A48 !important;}
-.danger p:before {content: "\f00d";}
+.alert.big {
+  padding-left: 4em !important;
+}
+.alert.normal::before {
+  left: 0.842em;
+}
+.alert.small::before {
+  left: 1.333em;
+}
+.alert.big::before {
+  left: 0.500em;
+}
+.alert::before {
+  font-family: 'dashicons';
+  font-size: 120% !important;
+  line-height: 0 !important;
+  position: absolute;
+  top: 50%;
+  left: 1em;
+}
+.alert.normal::before {
+  font-size: 120% !important;
+}
+.alert.small::before {
+  font-size: 75% !important;
+}
+.alert.big::before {
+  font-size: 200% !important;
+}
+.alert.hide-icon::before {
+  display: none;
+}
+.alert::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*--------------------------------------------------
+/* Icons
+--------------------------------------------------*/
+.alert.info::before {
+  content: "\f534";
+}
+.alert.success::before {
+  content: "\f502";
+}
+.alert.warning::before {
+  content: "\f534";
+}
+.alert.danger::before {
+  content: "\f153";
+}
+/*--------------------------------------------------
+/* Colors
+--------------------------------------------------*/
+.alert.alert {
+  background: #d4d4d4;
+  border-color: #bbbbbb;
+  color: #555555 !important;
+}
+.alert.alert h1,
+.alert.alert h2,
+.alert.alert h3,
+.alert.alert h4,
+.alert.alert h5,
+.alert.alert h6,
+.alert.alert a,
+.alert.alert strong {
+  color: #3b3b3b !important;
+}
+.alert.info {
+  background: #edf5f9;
+  border-color: #c7e0ec;
+  color: #3a87ad !important;
+}
+.alert.info h1,
+.alert.info h2,
+.alert.info h3,
+.alert.info h4,
+.alert.info h5,
+.alert.info h6,
+.alert.info a,
+.alert.info strong {
+  color: #2d6987 !important;
+}
+.alert.success {
+  background: #dfeedf;
+  border-color: #bdddbd;
+  color: #468847 !important;
+}
+.alert.success h1,
+.alert.success h2,
+.alert.success h3,
+.alert.success h4,
+.alert.success h5,
+.alert.success h6,
+.alert.success a,
+.alert.success strong {
+  color: #356635 !important;
+}
+.alert.warning {
+  background: #f0e9dc;
+  border-color: #e0d2b9;
+  color: #8f713e !important;
+}
+.alert.warning h1,
+.alert.warning h2,
+.alert.warning h3,
+.alert.warning h4,
+.alert.warning h5,
+.alert.warning h6,
+.alert.warning a,
+.alert.warning strong {
+  color: #6b552f !important;
+}
+.alert.danger {
+  background: #f2dede;
+  border-color: #e3baba;
+  color: #953d3c !important;
+}
+.alert.danger h1,
+.alert.danger h2,
+.alert.danger h3,
+.alert.danger h4,
+.alert.danger h5,
+.alert.danger h6,
+.alert.danger a,
+.alert.danger strong {
+  color: #712e2d !important;
+}

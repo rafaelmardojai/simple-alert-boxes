@@ -1,0 +1,89 @@
+//out: simple-alert-boxes.css
+
+/*--------------------------------------------------
+/* Alert Boxes Style
+--------------------------------------------------*/
+.alert {
+    box-sizing: border-box;
+    border: 1px solid;
+    font-size: 100%;
+    margin: 1em 0;
+    padding: 1em !important;
+    position: relative;
+    width: 100%;
+}
+.alert *:last-child {
+    margin-bottom: 0;
+}
+
+.alert.normal {padding-left: 2.884em !important;}
+.alert.small {padding-left: 2.667em !important;}
+.alert.big {padding-left: 4em !important;}
+
+.alert.normal::before {left: 0.842em;}
+.alert.small::before {left: 1.333em;}
+.alert.big::before {left: 0.500em;}
+
+.alert::before {
+    font-family: 'dashicons';
+    font-size: 120% !important;
+    line-height: 0 !important;
+    position: absolute;
+    top: 50%;
+    left: 1em;
+}
+
+.alert.normal::before {font-size: 120% !important;}
+.alert.small::before {font-size: 75% !important;}
+.alert.big::before {font-size: 200% !important;}
+.alert.hide-icon::before {display: none;}
+
+.alert::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*--------------------------------------------------
+/* Icons
+--------------------------------------------------*/
+
+.alert.info::before {content: "\f534";}
+.alert.success::before {content: "\f502";}
+.alert.warning::before {content: "\f534";}
+.alert.danger::before {content: "\f153";}
+
+//--------------------------------------------------
+// Palete
+//--------------------------------------------------
+
+.color-palete(@color) {
+    .alert& {
+        background: lighten(@color, 50%);
+        border-color: lighten(@color, 40%);
+        color: @color !important;
+        h1, h2, h3, h4, h5, h6, a, strong {
+            color: darken(@color, 10%) !important;
+        }
+    }
+}
+
+/*--------------------------------------------------
+/* Colors
+--------------------------------------------------*/
+
+.alert {
+    .color-palete(#555555);
+}
+.info {
+    .color-palete(#3A87AD);
+}
+.success {
+    .color-palete(#468847);
+}
+.warning {
+    .color-palete(#8f713e);
+}
+.danger {
+    .color-palete(#953d3c);
+}
