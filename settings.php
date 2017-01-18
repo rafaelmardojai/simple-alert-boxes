@@ -20,11 +20,6 @@ function sab_settings_init() {
         'sab'
     );
 
-    $fields = array(
-        'theme' => __( 'Theme', 'sab' ),
-        'icons' => __( 'Icons', 'sab' )
-    );
-
     add_settings_field(
         'sab_field_theme',
         __( 'Theme', 'sab' ),

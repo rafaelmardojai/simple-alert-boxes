@@ -3,41 +3,16 @@
 ------------------------------------------------------------------------------*/
 .simple-alert-boxes {
   box-sizing: border-box;
-  border: 1px solid;
   font-size: 100%;
   margin: 1em 0;
-  padding: 1em !important;
   position: relative;
   width: 100%;
 }
 .simple-alert-boxes *:last-child {
   margin-bottom: 0;
 }
-.simple-alert-boxes.sab_normal {
-  padding-left: 2.884em !important;
-}
-.simple-alert-boxes.sab_small {
-  padding-left: 2.667em !important;
-}
-.simple-alert-boxes.sab_big {
-  padding-left: 4em !important;
-}
-.simple-alert-boxes.sab_normal::before {
-  left: 0.842em;
-}
-.simple-alert-boxes.sab_small::before {
-  left: 1.333em;
-}
-.simple-alert-boxes.sab_big::before {
-  left: 0.500em;
-}
 .simple-alert-boxes::before {
-  font-family: 'dashicons';
-  font-size: 120% !important;
   line-height: 0 !important;
-  position: absolute;
-  top: 50%;
-  left: 1em;
 }
 .simple-alert-boxes.sab_normal::before {
   font-size: 120% !important;
@@ -59,13 +34,9 @@
 /*------------------------------------------------------------------------------
 /* Icons
 ------------------------------------------------------------------------------*/
+/* Dashicons */
 .simple-alert-boxes.sab_icons_dashicons::before {
   font-family: 'dashicons';
-}
-.simple-alert-boxes.sab_icons_fontawesome::before {
-  width: 1em;
-  text-align: center;
-  font-family: FontAwesome;
 }
 .simple-alert-boxes.sab_info.sab_icons_dashicons::before {
   content: "\f348";
@@ -79,6 +50,12 @@
 .simple-alert-boxes.sab_danger.sab_icons_dashicons::before {
   content: "\f153";
 }
+/* FontAwesome */
+.simple-alert-boxes.sab_icons_fontawesome::before {
+  width: 1em;
+  text-align: center;
+  font-family: FontAwesome;
+}
 .simple-alert-boxes.sab_info.sab_icons_fontawesome::before {
   content: "\f129";
 }
@@ -91,81 +68,180 @@
 .simple-alert-boxes.sab_danger.sab_icons_fontawesome::before {
   content: "\f00d";
 }
-/*------------------------------------------------------------------------------
-/* Colors
-------------------------------------------------------------------------------*/
-.simple-alert-boxes {
-  background: #eeeeee;
-  border-color: #bbbbbb;
-  color: #555555 !important;
+/*==============================================================================
+                                   THEMES
+==============================================================================*/
+/* Default theme */
+.simple-alert-boxes.sab_theme_default {
+  border: 1px solid;
+  padding: 1em !important;
 }
-.simple-alert-boxes h1,
-.simple-alert-boxes h2,
-.simple-alert-boxes h3,
-.simple-alert-boxes h4,
-.simple-alert-boxes h5,
-.simple-alert-boxes h6,
-.simple-alert-boxes a,
-.simple-alert-boxes strong {
-  color: #3b3b3b !important;
+.simple-alert-boxes.sab_theme_default::before {
+  position: absolute;
+  top: 50%;
+  left: 1em;
 }
-.simple-alert-boxes.sab_info {
-  background: #d9edf7;
+.simple-alert-boxes.sab_theme_default.sab_info {
+  background: #D9EDF7;
   border-color: #aad0e2;
   color: #31708f !important;
 }
-.simple-alert-boxes.sab_info h1,
-.simple-alert-boxes.sab_info h2,
-.simple-alert-boxes.sab_info h3,
-.simple-alert-boxes.sab_info h4,
-.simple-alert-boxes.sab_info h5,
-.simple-alert-boxes.sab_info h6,
-.simple-alert-boxes.sab_info a,
-.simple-alert-boxes.sab_info strong {
+.simple-alert-boxes.sab_theme_default.sab_info h1,
+.simple-alert-boxes.sab_theme_default.sab_info h2,
+.simple-alert-boxes.sab_theme_default.sab_info h3,
+.simple-alert-boxes.sab_theme_default.sab_info h4,
+.simple-alert-boxes.sab_theme_default.sab_info h5,
+.simple-alert-boxes.sab_theme_default.sab_info h6,
+.simple-alert-boxes.sab_theme_default.sab_info a,
+.simple-alert-boxes.sab_theme_default.sab_info strong {
   color: #245269 !important;
 }
-.simple-alert-boxes.sab_success {
-  background: #dff0d8;
+.simple-alert-boxes.sab_theme_default.sab_success {
+  background: #DFF0D8;
   border-color: #aad4ab;
   color: #3c763d !important;
 }
-.simple-alert-boxes.sab_success h1,
-.simple-alert-boxes.sab_success h2,
-.simple-alert-boxes.sab_success h3,
-.simple-alert-boxes.sab_success h4,
-.simple-alert-boxes.sab_success h5,
-.simple-alert-boxes.sab_success h6,
-.simple-alert-boxes.sab_success a,
-.simple-alert-boxes.sab_success strong {
+.simple-alert-boxes.sab_theme_default.sab_success h1,
+.simple-alert-boxes.sab_theme_default.sab_success h2,
+.simple-alert-boxes.sab_theme_default.sab_success h3,
+.simple-alert-boxes.sab_theme_default.sab_success h4,
+.simple-alert-boxes.sab_theme_default.sab_success h5,
+.simple-alert-boxes.sab_theme_default.sab_success h6,
+.simple-alert-boxes.sab_theme_default.sab_success a,
+.simple-alert-boxes.sab_theme_default.sab_success strong {
   color: #2b542c !important;
 }
-.simple-alert-boxes.sab_warning {
-  background: #fcf8e3;
+.simple-alert-boxes.sab_theme_default.sab_warning {
+  background: #FCF8E3;
   border-color: #deceb3;
   color: #8a6d3b !important;
 }
-.simple-alert-boxes.sab_warning h1,
-.simple-alert-boxes.sab_warning h2,
-.simple-alert-boxes.sab_warning h3,
-.simple-alert-boxes.sab_warning h4,
-.simple-alert-boxes.sab_warning h5,
-.simple-alert-boxes.sab_warning h6,
-.simple-alert-boxes.sab_warning a,
-.simple-alert-boxes.sab_warning strong {
+.simple-alert-boxes.sab_theme_default.sab_warning h1,
+.simple-alert-boxes.sab_theme_default.sab_warning h2,
+.simple-alert-boxes.sab_theme_default.sab_warning h3,
+.simple-alert-boxes.sab_theme_default.sab_warning h4,
+.simple-alert-boxes.sab_theme_default.sab_warning h5,
+.simple-alert-boxes.sab_theme_default.sab_warning h6,
+.simple-alert-boxes.sab_theme_default.sab_warning a,
+.simple-alert-boxes.sab_theme_default.sab_warning strong {
   color: #66512c !important;
 }
-.simple-alert-boxes.sab_danger {
-  background: #f2dede;
+.simple-alert-boxes.sab_theme_default.sab_danger {
+  background: #F2DEDE;
   border-color: #ebcdcc;
   color: #a94442 !important;
 }
-.simple-alert-boxes.sab_danger h1,
-.simple-alert-boxes.sab_danger h2,
-.simple-alert-boxes.sab_danger h3,
-.simple-alert-boxes.sab_danger h4,
-.simple-alert-boxes.sab_danger h5,
-.simple-alert-boxes.sab_danger h6,
-.simple-alert-boxes.sab_danger a,
-.simple-alert-boxes.sab_danger strong {
+.simple-alert-boxes.sab_theme_default.sab_danger h1,
+.simple-alert-boxes.sab_theme_default.sab_danger h2,
+.simple-alert-boxes.sab_theme_default.sab_danger h3,
+.simple-alert-boxes.sab_theme_default.sab_danger h4,
+.simple-alert-boxes.sab_theme_default.sab_danger h5,
+.simple-alert-boxes.sab_theme_default.sab_danger h6,
+.simple-alert-boxes.sab_theme_default.sab_danger a,
+.simple-alert-boxes.sab_theme_default.sab_danger strong {
   color: #843534 !important;
+}
+.simple-alert-boxes.sab_theme_default.sab_normal {
+  padding-left: 2.884em !important;
+}
+.simple-alert-boxes.sab_theme_default.sab_small {
+  padding-left: 2.667em !important;
+}
+.simple-alert-boxes.sab_theme_default.sab_big {
+  padding-left: 4em !important;
+}
+.simple-alert-boxes.sab_theme_default.sab_normal::before {
+  left: 0.842em;
+}
+.simple-alert-boxes.sab_theme_default.sab_small::before {
+  left: 1.333em;
+}
+.simple-alert-boxes.sab_theme_default.sab_big::before {
+  left: 0.500em;
+}
+/* ... */
+.simple-alert-boxes.sab_theme_wordpress {
+  background: #FFF;
+  border: 2px solid;
+  border-radius: 3px;
+  border-left-width: 60px;
+  color: #555;
+  font-weight: 500;
+  padding: 15px;
+  position: relative;
+  width: 100%;
+}
+.simple-alert-boxes.sab_theme_wordpress::before {
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_hide-icon {
+  border-left-width: 2px;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_info {
+  border-color: #31708f;
+  color: #31708f !important;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_info h1,
+.simple-alert-boxes.sab_theme_wordpress.sab_info h2,
+.simple-alert-boxes.sab_theme_wordpress.sab_info h3,
+.simple-alert-boxes.sab_theme_wordpress.sab_info h4,
+.simple-alert-boxes.sab_theme_wordpress.sab_info h5,
+.simple-alert-boxes.sab_theme_wordpress.sab_info h6,
+.simple-alert-boxes.sab_theme_wordpress.sab_info a,
+.simple-alert-boxes.sab_theme_wordpress.sab_info strong {
+  color: #245269 !important;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_success {
+  border-color: #3c763d;
+  color: #3c763d !important;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_success h1,
+.simple-alert-boxes.sab_theme_wordpress.sab_success h2,
+.simple-alert-boxes.sab_theme_wordpress.sab_success h3,
+.simple-alert-boxes.sab_theme_wordpress.sab_success h4,
+.simple-alert-boxes.sab_theme_wordpress.sab_success h5,
+.simple-alert-boxes.sab_theme_wordpress.sab_success h6,
+.simple-alert-boxes.sab_theme_wordpress.sab_success a,
+.simple-alert-boxes.sab_theme_wordpress.sab_success strong {
+  color: #2b542c !important;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_warning {
+  border-color: #8a6d3b;
+  color: #8a6d3b !important;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_warning h1,
+.simple-alert-boxes.sab_theme_wordpress.sab_warning h2,
+.simple-alert-boxes.sab_theme_wordpress.sab_warning h3,
+.simple-alert-boxes.sab_theme_wordpress.sab_warning h4,
+.simple-alert-boxes.sab_theme_wordpress.sab_warning h5,
+.simple-alert-boxes.sab_theme_wordpress.sab_warning h6,
+.simple-alert-boxes.sab_theme_wordpress.sab_warning a,
+.simple-alert-boxes.sab_theme_wordpress.sab_warning strong {
+  color: #66512c !important;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_danger {
+  border-color: #a94442;
+  color: #a94442 !important;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_danger h1,
+.simple-alert-boxes.sab_theme_wordpress.sab_danger h2,
+.simple-alert-boxes.sab_theme_wordpress.sab_danger h3,
+.simple-alert-boxes.sab_theme_wordpress.sab_danger h4,
+.simple-alert-boxes.sab_theme_wordpress.sab_danger h5,
+.simple-alert-boxes.sab_theme_wordpress.sab_danger h6,
+.simple-alert-boxes.sab_theme_wordpress.sab_danger a,
+.simple-alert-boxes.sab_theme_wordpress.sab_danger strong {
+  color: #843534 !important;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_normal::before {
+  left: -39.6px;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_small::before {
+  left: -36px;
+}
+.simple-alert-boxes.sab_theme_wordpress.sab_big::before {
+  left: -46px;
 }

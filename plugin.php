@@ -74,28 +74,32 @@ function simple_alert_boxes_output( $atts, $content = null) {
     $atts = shortcode_atts( array(
         'type'      => 'info', // set type attr and defaults
 		'icon-size' => 'normal', // set icon-size attr and defaults
-		'closable'  => 'false', //
-        'text'      => '' // 1.0.0 $content
+		'text'      => '' // 1.0.0 $content
     ), $atts );
 
 	$options = get_option( 'sab_options' );
 	$classes = array();
 
-	$classes[] = 'theme_' . $options['sab_field_theme'];
-	$classes[] = 'icons_' . $options['sab_field_icons'];
+	if ( isset( $options['sab_field_theme'] ) ) :
+		$classes[] = 'theme_' . $options['sab_field_theme'];
+	else :
+		$classes[] = 'theme_default';
+	endif;
+	if ( isset( $options['sab_field_icons'] ) ) :
+		$classes[] = 'icons_' . $options['sab_field_icons'];
+	else :
+		$classes[] = 'icons_dashicons';
+	endif;
 	$classes[] = $atts['type'];
 	$classes[] = $atts['icon-size'];
 
-	if ( $atts['closable'] == 'true' ) {
-		$classes[] = 'closable';
-	}
-
+	ob_start();
 	?>
 	<div class="simple-alert-boxes <?php foreach( $classes as $class ) { echo 'sab_' . $class . ' '; }?>">
 		<?php echo $atts['text']; echo do_shortcode( $content ); ?>
 	</div>
 	<?php
-	return;
+	return ob_get_clean();
 }
 add_shortcode( 'alert', 'simple_alert_boxes_output' );
 

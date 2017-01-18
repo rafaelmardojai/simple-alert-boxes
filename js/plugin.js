@@ -41,11 +41,6 @@
                                 {text: 'Big', value: 'big'},
                                 {text: 'Hide Icon', value: 'hide-icon'}
                             ]
-                        },
-                        {
-                            type: 'checkbox',
-                            name: 'closable',
-                            label: 'Closable'
                         }
                     ],
                     onsubmit: function(e){

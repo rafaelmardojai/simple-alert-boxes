@@ -5,10 +5,8 @@
 ------------------------------------------------------------------------------*/
 .simple-alert-boxes {
     box-sizing: border-box;
-    border: 1px solid;
     font-size: 100%;
     margin: 1em 0;
-    padding: 1em !important;
     position: relative;
     width: 100%;
 }
@@ -16,21 +14,8 @@
     margin-bottom: 0;
 }
 
-.simple-alert-boxes.sab_normal {padding-left: 2.884em !important;}
-.simple-alert-boxes.sab_small {padding-left: 2.667em !important;}
-.simple-alert-boxes.sab_big {padding-left: 4em !important;}
-
-.simple-alert-boxes.sab_normal::before {left: 0.842em;}
-.simple-alert-boxes.sab_small::before {left: 1.333em;}
-.simple-alert-boxes.sab_big::before {left: 0.500em;}
-
 .simple-alert-boxes::before {
-    font-family: 'dashicons';
-    font-size: 120% !important;
     line-height: 0 !important;
-    position: absolute;
-    top: 50%;
-    left: 1em;
 }
 
 .simple-alert-boxes.sab_normal::before {font-size: 120% !important;}
@@ -48,30 +33,33 @@
 /* Icons
 ------------------------------------------------------------------------------*/
 
+/* Dashicons */
 .simple-alert-boxes.sab_icons_dashicons::before {
     font-family: 'dashicons';
 }
-.simple-alert-boxes.sab_icons_fontawesome::before {
-    width: 1em;
-    text-align: center;
-    font-family: FontAwesome;
-}
-
 .simple-alert-boxes.sab_info.sab_icons_dashicons::before {content: "\f348";}
 .simple-alert-boxes.sab_success.sab_icons_dashicons::before {content: "\f502";}
 .simple-alert-boxes.sab_warning.sab_icons_dashicons::before {content: "\f534";}
 .simple-alert-boxes.sab_danger.sab_icons_dashicons::before {content: "\f153";}
 
+/* FontAwesome */
+.simple-alert-boxes.sab_icons_fontawesome::before {
+    width: 1em;
+    text-align: center;
+    font-family: FontAwesome;
+}
 .simple-alert-boxes.sab_info.sab_icons_fontawesome::before {content: "\f129";}
 .simple-alert-boxes.sab_success.sab_icons_fontawesome::before {content: "\f00c";}
 .simple-alert-boxes.sab_warning.sab_icons_fontawesome::before {content: "\f12a";}
 .simple-alert-boxes.sab_danger.sab_icons_fontawesome::before {content: "\f00d";}
 
-//------------------------------------------------------------------------------
-// Palete
-//------------------------------------------------------------------------------
+/*==============================================================================
+                                   THEMES
+==============================================================================*/
 
-.color-palete(@color, @bgcolor) {
+/* Default theme */
+
+.default-palete(@color, @bgcolor) {
     background: @bgcolor;
     border-color: lighten(@color, 40%);
     color: @color !important;
@@ -80,23 +68,101 @@
     }
 }
 
-/*------------------------------------------------------------------------------
-/* Colors
-------------------------------------------------------------------------------*/
+.simple-alert-boxes.sab_theme_default {
+    border: 1px solid;
+    padding: 1em !important;
 
-.simple-alert-boxes {
-    .color-palete(#555555, #EEEEEE);
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 1em;
+    }
 
     &.sab_info {
-        .color-palete(#31708f, #D9EDF7);
+        .default-palete(#31708f, #D9EDF7);
     }
     &.sab_success {
-        .color-palete(#3c763d, #DFF0D8);
+        .default-palete(#3c763d, #DFF0D8);
     }
     &.sab_warning {
-        .color-palete(#8a6d3b, #FCF8E3);
+        .default-palete(#8a6d3b, #FCF8E3);
     }
     &.sab_danger {
-        .color-palete(#a94442, #F2DEDE);
+        .default-palete(#a94442, #F2DEDE);
+    }
+
+    &.sab_normal {
+        padding-left: 2.884em !important;
+    }
+    &.sab_small {
+        padding-left: 2.667em !important;
+    }
+    &.sab_big {
+        padding-left: 4em !important;
+    }
+
+    &.sab_normal::before {
+        left: 0.842em;
+    }
+    &.sab_small::before {
+        left: 1.333em;
+    }
+    &.sab_big::before {
+        left: 0.500em;
+    }
+}
+
+/* ... */
+.wordpress-palete(@color, @bgcolor) {
+    border-color: @color;
+    color: @color !important;
+    h1, h2, h3, h4, h5, h6, a, strong {
+        color: darken(@color, 10%) !important;
+    }
+}
+
+.simple-alert-boxes.sab_theme_wordpress {
+    background: #FFF;
+    border: 2px solid;
+    border-radius: 3px;
+    border-left-width: 60px;
+    color: #555;
+    font-weight: 500;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+
+    &::before {
+        color: #FFF;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+
+    &.sab_hide-icon {
+        border-left-width: 2px;
+    }
+
+    &.sab_info {
+        .wordpress-palete(#31708f, #D9EDF7);
+    }
+    &.sab_success {
+        .wordpress-palete(#3c763d, #DFF0D8);
+    }
+    &.sab_warning {
+        .wordpress-palete(#8a6d3b, #FCF8E3);
+    }
+    &.sab_danger {
+        .wordpress-palete(#a94442, #F2DEDE);
+    }
+
+    &.sab_normal::before {
+        left: -39.6px;
+    }
+    &.sab_small::before {
+        left: -36px;
+    }
+    &.sab_big::before {
+        left: -46px;
     }
 }
