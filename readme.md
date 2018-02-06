@@ -26,7 +26,7 @@ Also you can change the icon size:
 ----
 
 * Demo & Examples: http://www.rafael.mardojai.com/simple-alert-boxes-plugin/
-* Github repository: https://github.com/mardojai/Simple-Alert-Boxes-Wordpress-Plugin
+* Wordpress.org: https://wordpress.org/plugins/simple-alert-boxes/
 
 ## Installation
 
@@ -42,8 +42,7 @@ Also you can change the icon size:
 
 ## Changelog
 
-#### 1.4.0 (current dev)
-* Settings page
+#### 1.4.0
 * CSS improvements
 * Render others shortcodes inside the shortcode
 
