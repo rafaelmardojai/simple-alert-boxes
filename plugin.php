@@ -43,10 +43,8 @@
 function simple_alert_boxes_styles() {
 	$options = get_option( 'sab_options' );
 
-	wp_enqueue_style( 'simple-alert-boxes', plugins_url( 'css/simple-alert-boxes.css', __FILE__ ), array('dashicons'), '1.4', 'all' );
-	if ( $options['sab_field_icons'] == 'fontawesome') {
-		wp_enqueue_style( 'sab-fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0', 'all' );
-	}
+	wp_enqueue_style( 'simple-alert-boxes', plugins_url( 'css/simple-alert-boxes.css', __FILE__ ), array(), '1.4', 'all' );
+	wp_enqueue_style( 'sab-fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0', 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'simple_alert_boxes_styles' );
 
@@ -79,17 +77,6 @@ function simple_alert_boxes_output( $atts, $content = null) {
 
 	$options = get_option( 'sab_options' );
 	$classes = array();
-
-	if ( isset( $options['sab_field_theme'] ) ) :
-		$classes[] = 'theme_' . $options['sab_field_theme'];
-	else :
-		$classes[] = 'theme_default';
-	endif;
-	if ( isset( $options['sab_field_icons'] ) ) :
-		$classes[] = 'icons_' . $options['sab_field_icons'];
-	else :
-		$classes[] = 'icons_dashicons';
-	endif;
 	$classes[] = $atts['type'];
 	$classes[] = $atts['icon-size'];
 
@@ -156,23 +143,3 @@ function sab_add_tinymce_button( $buttons ) {
     array_push( $buttons, 'alert_boxes_button_key' );
     return $buttons;
 }
-
-/**
- * Settings link on plugin actions
- *
- * @since 1.4.0
- *
- * @param array $links Plugin action links
- */
-function sab_plugin_action_links( $links ) {
-	$links[] = '<a href="'. esc_url( get_admin_url( null, 'options-general.php?page=sab' ) ) .'">Settings</a>';
-	return $links;
-}
-add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'sab_plugin_action_links' );
-
-/**
- * Include settings funtions
- *
- * @since 1.4.0
- */
-include 'settings.php';
